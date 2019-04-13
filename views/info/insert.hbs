@@ -1,0 +1,48 @@
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a href="#" class="navbar-brand ml-3"><i class="fa fa-paper-plane"></i>Tour<span style="color: steelblue">De</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"></span></button>
+
+			<div class="collapse navbar-collapse"></div>
+			<!--center align korte-->
+			<div class="collapse navbar-collapse" id="navbarMenu">
+				<form action="/" class="form-inline my-2 my-lg-0">
+					<button class="btn menu-right-btn border" type="submit">Home</button>
+				</form>
+				<form action="/list" class="form-inline my-2 my-lg-0">
+					<button class="btn menu-right-btn border" type="submit">List</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+<div class="row mt-5">
+	<div class="col-md-6 m-auto">
+		<div class="card card-body">
+			<h1 class="text-center mb-3">
+				<i class="fa fa-user-secret"></i> Admin Control Panel
+			</h1>
+			<form action="/" method="POST">
+				<div class="form-group">
+					<label for="place">Place Name</label>
+					<input type="text" id="name" name="place" class="form-control" placeholder="Enter Place Name" value="{{admin.place}}" />
+				</div>
+				<div class="form-group">
+					<label for="country">Country Name</label>
+					<input type="name" id="name" name="country" class="form-control" placeholder="Enter Country Name" value="{{admin.place}}" />
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<textarea class="form-control" id="description" name="description" rows="5" placeholder="Enter Place's Description" value="{{admin.place}}"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-plus-square"></i>
+					Insert
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="row mt-5"></div>
+<footer class="page-footer font-small fixed-bottom">
+	<div class="footer-copyright text-center py-3">&copy;2019 Copyright: TourDe</div>
+</footer>

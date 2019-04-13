@@ -1,0 +1,35 @@
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a href="#" class="navbar-brand ml-3"><i class="fa fa-paper-plane"></i>Tour<span style="color: steelblue">De</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"></span></button>
+
+			<div class="collapse navbar-collapse"></div>
+			<!--center align korte-->
+			<div class="collapse navbar-collapse" id="navbarMenu">
+				<form action="/" class="form-inline my-2 my-lg-0">
+					<button class="btn menu-right-btn border" type="submit">Home</button>
+				</form>
+				<form action="/insert" class="form-inline my-2 my-lg-0">
+					<button class="btn menu-right-btn border" type="submit">Insert</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+<div class="row mt-5"></div>
+<div class="card-columns">
+	{{#each list}}
+		<div class="card border-primary mb-3 text-center" style="max-width: 20rem;">
+			<div class="card-header">{{this.country}}</div>
+			<div class="card-body">
+				<h4 class="card-title">{{this.place}}</h4>
+				<p class="card-text">{{this.description}}</p>
+				<a href="/update/a{{this._id}}"><i class="fa fa-edit fa-lg" aria-hidden="true"></i></a>
+				<a href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	{{/each}}
+</div>
+<footer class="page-footer font-small fixed-bottom">
+	<div class="footer-copyright text-center py-3">&copy;2019 Copyright: TourDe</div>
+</footer>
